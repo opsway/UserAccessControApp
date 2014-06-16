@@ -1,0 +1,19 @@
+{
+    "name": "OpsWay/SshUserAccessControl",
+    "description": "Manage ssh access control to project nodes vie Chef api",
+    "minimum-stability": "beta",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*"
+    },
+    "authors": [
+        {
+            "name": "Alexandr Vronskiy",
+            "email": "alvro@opsway/com"
+        }
+    ]
+}
