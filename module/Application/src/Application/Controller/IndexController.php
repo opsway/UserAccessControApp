@@ -94,6 +94,7 @@ class IndexController extends AbstractActionController
 
                 $errors = array();
                 if (isset($repoUsers[$key])) {
+                    $tabsInfo[$scope][$key]['org_name'] = $repoUsers[$key]['org_name'];
                     if ($repoUsers[$key]['email'] != $chefUsers[$key]['email']) {
                         $errors[] = 'Does not compare between GIT and CHEF.';
                     }
@@ -175,8 +176,8 @@ class IndexController extends AbstractActionController
                 if (iterator_count(new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($repo_folder,\FilesystemIterator::SKIP_DOTS))) <= 1){
                     exec("git clone https://{$settings['repo']['user']}:{$settings['repo']['password']}@{$settings['repo']['url']} $repo_folder");
                 }
-                /*
-                exec("cd $repo_folder; git pull"); */
+
+                exec("cd $repo_folder; git pull");
 
                 $userFolder = $repo_folder . DIRECTORY_SEPARATOR . 'data_bags' . DIRECTORY_SEPARATOR . 'users';
                 $repoUsers = array();
