@@ -42,6 +42,15 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
                     </ul>
+                    <div class="pull-right">
+                        <?php if(!$this->zfcUserIdentity()): ?>
+                            <!-- display the login form -->
+                            <?php echo $this->zfcUserLoginWidget(array('redirect'=>'application')); ?>
+                        <?php else: ?>
+                            <!-- display the 'display name' of the user -->
+                           <strong style="color: #ffffff;"><?php echo $this->zfcUserIdentity()->getEmail(); ?> <a href="<?php echo $this->url('zfcuser/logout') ?>">[<?php echo $this->translate('Sign Out'); ?>]</a></strong>
+                        <?php endif?>
+                    </div>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>

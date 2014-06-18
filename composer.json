@@ -8,12 +8,14 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.3.*"
+        "zendframework/zendframework": "2.3.*",
+        "zf-commons/zfc-user": "dev-master",
+        "onelogin/php-saml": "2.*"
     },
     "authors": [
         {
             "name": "Alexandr Vronskiy",
-            "email": "alvro@opsway/com"
+            "email": "alvro@opsway.com"
         }
     ]
 }
