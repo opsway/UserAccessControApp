@@ -10,8 +10,14 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
         "zf-commons/zfc-user": "dev-master",
-        "onelogin/php-saml": "2.*"
+        "twowholeworms/tww-saml":"dev-master"
     },
+    "repositories": [
+            {
+                "type": "git",
+                "url": "http://github.com/shandyDev/TwwSaml"
+            }
+        ],
     "authors": [
         {
             "name": "Alexandr Vronskiy",
